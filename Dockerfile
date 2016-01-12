@@ -5,6 +5,7 @@ RUN apt-get update \
         ca-certificates \
         libapache2-mod-php5 \
         php5-mysql \
+        php5-redis \
         wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
