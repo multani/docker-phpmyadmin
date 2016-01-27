@@ -26,4 +26,6 @@ RUN wget --quiet https://files.phpmyadmin.net/phpMyAdmin/${PHPMYADMIN_VERSION}/p
 
 COPY apache2.conf /etc/apache2/apache2.conf
 
+VOLUME ["/run", "/tmp"]
+
 CMD ["apache2", "-DFOREGROUND"]
