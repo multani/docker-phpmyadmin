@@ -13,8 +13,8 @@ RUN apt-get update \
 RUN rm /etc/apache2/conf-enabled/* /etc/apache2/sites-enabled/* /etc/apache2/apache2.conf
 RUN a2dismod mpm_event && a2enmod mpm_prefork
 
-ENV PHPMYADMIN_VERSION 4.5.3.1
-ENV PHPMYADMIN_SHA1 8b889e3e7cf2cf5b0be724d0ec026943bd8d147f
+ENV PHPMYADMIN_VERSION 4.5.5
+ENV PHPMYADMIN_SHA1 22f48adc303717840aecbfed62a34490ccfb4162
 
 RUN wget --quiet https://files.phpmyadmin.net/phpMyAdmin/${PHPMYADMIN_VERSION}/phpMyAdmin-${PHPMYADMIN_VERSION}-english.tar.gz -O /phpmyadmin.tar.gz \
     && echo "${PHPMYADMIN_SHA1}  /phpmyadmin.tar.gz" | sha1sum -c - \
